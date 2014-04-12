@@ -1,5 +1,6 @@
 password.py
 *.pyc
+*.txt
 clean_emails.py
 logic.py
 email_app.py

@@ -40,7 +40,6 @@ def gather(mail, folder, address):
   result, data = mail.uid('search', None, string)
   if result == 'OK':
     data = data[0].split(' ')
-    print "number of emails in ", preposition, "is: ", len(data)
   else:
     print "error"
     return
@@ -59,8 +58,6 @@ def gather(mail, folder, address):
       if part.get_content_type() == 'text/plain':
         body = part.get_payload(decode = True)
         file_d.write(body)
-  print name_tuple
-  print file_name
   return file_name, name_tuple
 
 if __name__ == '__main__':
